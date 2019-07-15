@@ -1484,7 +1484,14 @@ type MenuUpdate {
 
 type MetaClientStore {
   name: String!
-  metadata: [MetaItem]
+  metadata: [MetaItem]!
+}
+
+input MetaInput {
+  storeLabel: String!
+  clientName: String!
+  key: String!
+  value: String!
 }
 
 type MetaItem {
@@ -1494,7 +1501,7 @@ type MetaItem {
 
 type MetaStore {
   label: String!
-  clients: [MetaClientStore]
+  clients: [MetaClientStore]!
 }
 
 type Money {
@@ -1680,6 +1687,7 @@ type Mutations {
   userAvatarUpdate(image: Upload!): UserAvatarUpdate
   userAvatarDelete: UserAvatarDelete
   userBulkSetActive(ids: [ID]!, isActive: Boolean!): UserBulkSetActive
+  userUpdatePrivateMetadata(id: ID!, input: MetaInput!): UserUpdatePrivateMeta
 }
 
 input NameTranslationInput {
@@ -3063,7 +3071,7 @@ type User implements Node {
   avatar(size: Int): Image
   events: [CustomerEvent]
   storedPaymentSources: [PaymentSource]
-  privateMeta: [MetaStore]
+  privateMeta: [MetaStore]!
 }
 
 input UserAddressInput {
@@ -3106,6 +3114,11 @@ input UserCreateInput {
   isActive: Boolean
   note: String
   sendPasswordEmail: Boolean
+}
+
+type UserUpdatePrivateMeta {
+  errors: [Error!]
+  user: User
 }
 
 type VAT {
