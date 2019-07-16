@@ -28,6 +28,7 @@ from .mutations import (
     UserAvatarDelete,
     UserAvatarUpdate,
     UserClearStoredMeta,
+    UserClearStoredPrivateMeta,
     UserUpdateMeta,
     UserUpdatePrivateMeta,
 )
@@ -128,6 +129,7 @@ class AccountMutations(graphene.ObjectType):
     user_bulk_set_active = UserBulkSetActive.Field()
 
     user_update_metadata = UserUpdateMeta.Field()
+    user_clear_stored_metadata = UserClearStoredMeta.Field()
 
     user_update_private_metadata = UserUpdatePrivateMeta.Field()
-    user_clear_stored_metadata = UserClearStoredMeta.Field()
+    user_clear_stored_private_metadata = UserClearStoredPrivateMeta.Field()
