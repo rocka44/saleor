@@ -3079,6 +3079,7 @@ type User implements Node {
   events: [CustomerEvent]
   storedPaymentSources: [PaymentSource]
   privateMeta: [MetaStore]!
+  meta: [MetaStore]!
 }
 
 input UserAddressInput {
