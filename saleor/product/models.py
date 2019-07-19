@@ -21,8 +21,6 @@ from prices import MoneyRange
 from text_unidecode import unidecode
 from versatileimagefield.fields import PPOIField, VersatileImageField
 
-from saleor.core.models import ModelWithMetadata
-
 from ..core.exceptions import InsufficientStock
 from ..core.models import (
     ModelWithMetadata,
@@ -124,7 +122,7 @@ class ProductsQueryset(PublishedQuerySet):
         return qs
 
 
-class Product(SeoModel, PublishableModel):
+class Product(SeoModel, ModelWithMetadata, PublishableModel):
     product_type = models.ForeignKey(
         ProductType, related_name="products", on_delete=models.CASCADE
     )
@@ -145,8 +143,6 @@ class Product(SeoModel, PublishableModel):
     weight = MeasurementField(
         measurement=Weight, unit_choices=WeightUnits.CHOICES, blank=True, null=True
     )
-    meta = JSONField(blank=True, null=True, default=dict, encoder=CustomJsonEncoder)
-
     objects = ProductsQueryset.as_manager()
     translated = TranslationProxy()
 
