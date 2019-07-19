@@ -24,6 +24,7 @@ All notable, unreleased changes to this project will be documented in this file.
 - Add attribute visibility config - #4449 by @dominik-zeglen
 - Add slug generation = #4488 by @dominik-zeglen
 - Dropped `null` in `sort_order` fields to make it easier to reorder in API - #4481 by @NyanKiyoshi
+- Add "value required" switch - #4498 by @dominik-zeglen
 
 ## [Unreleased]
 
