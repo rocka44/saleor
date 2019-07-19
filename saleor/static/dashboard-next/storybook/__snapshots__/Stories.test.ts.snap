@@ -6907,6 +6907,50 @@ exports[`Storyshots Views / Attributes / Attribute details create 1`] = `
                   </div>
                 </div>
               </div>
+              <div
+                class="FormSpacer-spacer-id"
+              />
+              <label
+                class="MuiFormControlLabel-root-id"
+              >
+                <span
+                  class="MuiSwitch-root-id"
+                >
+                  <span
+                    class="MuiButtonBase-root-id MuiIconButton-root-id MuiPrivateSwitchBase-root-id MuiSwitch-switchBase-id MuiSwitch-colorPrimary-id"
+                  >
+                    <span
+                      class="MuiIconButton-label-id"
+                    >
+                      <span
+                        class="MuiSwitch-icon-id"
+                      />
+                      <input
+                        class="MuiPrivateSwitchBase-input-id"
+                        name="valueRequired"
+                        type="checkbox"
+                      />
+                    </span>
+                  </span>
+                  <span
+                    class="MuiSwitch-bar-id"
+                  />
+                </span>
+                <span
+                  class="MuiTypography-root-id MuiTypography-body2-id MuiFormControlLabel-label-id"
+                >
+                  <div
+                    class="ControlledSwitch-label-id"
+                  >
+                    <span
+                      class="ControlledSwitch-labelText-id"
+                    >
+                      Value Required
+                    </span>
+                    <div />
+                  </div>
+                </span>
+              </label>
             </div>
           </div>
           <div
@@ -7398,6 +7442,50 @@ exports[`Storyshots Views / Attributes / Attribute details default 1`] = `
                   </div>
                 </div>
               </div>
+              <div
+                class="FormSpacer-spacer-id"
+              />
+              <label
+                class="MuiFormControlLabel-root-id"
+              >
+                <span
+                  class="MuiSwitch-root-id"
+                >
+                  <span
+                    class="MuiButtonBase-root-id MuiIconButton-root-id MuiPrivateSwitchBase-root-id MuiSwitch-switchBase-id MuiSwitch-colorPrimary-id"
+                  >
+                    <span
+                      class="MuiIconButton-label-id"
+                    >
+                      <span
+                        class="MuiSwitch-icon-id"
+                      />
+                      <input
+                        class="MuiPrivateSwitchBase-input-id"
+                        name="valueRequired"
+                        type="checkbox"
+                      />
+                    </span>
+                  </span>
+                  <span
+                    class="MuiSwitch-bar-id"
+                  />
+                </span>
+                <span
+                  class="MuiTypography-root-id MuiTypography-body2-id MuiFormControlLabel-label-id"
+                >
+                  <div
+                    class="ControlledSwitch-label-id"
+                  >
+                    <span
+                      class="ControlledSwitch-labelText-id"
+                    >
+                      Value Required
+                    </span>
+                    <div />
+                  </div>
+                </span>
+              </label>
             </div>
           </div>
           <div
@@ -7917,6 +8005,50 @@ exports[`Storyshots Views / Attributes / Attribute details form errors 1`] = `
                   </div>
                 </div>
               </div>
+              <div
+                class="FormSpacer-spacer-id"
+              />
+              <label
+                class="MuiFormControlLabel-root-id"
+              >
+                <span
+                  class="MuiSwitch-root-id"
+                >
+                  <span
+                    class="MuiButtonBase-root-id MuiIconButton-root-id MuiPrivateSwitchBase-root-id MuiSwitch-switchBase-id MuiSwitch-colorPrimary-id"
+                  >
+                    <span
+                      class="MuiIconButton-label-id"
+                    >
+                      <span
+                        class="MuiSwitch-icon-id"
+                      />
+                      <input
+                        class="MuiPrivateSwitchBase-input-id"
+                        name="valueRequired"
+                        type="checkbox"
+                      />
+                    </span>
+                  </span>
+                  <span
+                    class="MuiSwitch-bar-id"
+                  />
+                </span>
+                <span
+                  class="MuiTypography-root-id MuiTypography-body2-id MuiFormControlLabel-label-id"
+                >
+                  <div
+                    class="ControlledSwitch-label-id"
+                  >
+                    <span
+                      class="ControlledSwitch-labelText-id"
+                    >
+                      Value Required
+                    </span>
+                    <div />
+                  </div>
+                </span>
+              </label>
             </div>
           </div>
           <div
@@ -8443,6 +8575,50 @@ exports[`Storyshots Views / Attributes / Attribute details loading 1`] = `
                   </div>
                 </div>
               </div>
+              <div
+                class="FormSpacer-spacer-id"
+              />
+              <label
+                class="MuiFormControlLabel-root-id"
+              >
+                <span
+                  class="MuiSwitch-root-id"
+                >
+                  <span
+                    class="MuiButtonBase-root-id MuiIconButton-root-id MuiPrivateSwitchBase-root-id MuiSwitch-switchBase-id MuiSwitch-colorPrimary-id"
+                  >
+                    <span
+                      class="MuiIconButton-label-id"
+                    >
+                      <span
+                        class="MuiSwitch-icon-id"
+                      />
+                      <input
+                        class="MuiPrivateSwitchBase-input-id"
+                        name="valueRequired"
+                        type="checkbox"
+                      />
+                    </span>
+                  </span>
+                  <span
+                    class="MuiSwitch-bar-id"
+                  />
+                </span>
+                <span
+                  class="MuiTypography-root-id MuiTypography-body2-id MuiFormControlLabel-label-id"
+                >
+                  <div
+                    class="ControlledSwitch-label-id"
+                  >
+                    <span
+                      class="ControlledSwitch-labelText-id"
+                    >
+                      Value Required
+                    </span>
+                    <div />
+                  </div>
+                </span>
+              </label>
             </div>
           </div>
           <div
@@ -8906,6 +9082,50 @@ exports[`Storyshots Views / Attributes / Attribute details multiple select input
                   </div>
                 </div>
               </div>
+              <div
+                class="FormSpacer-spacer-id"
+              />
+              <label
+                class="MuiFormControlLabel-root-id"
+              >
+                <span
+                  class="MuiSwitch-root-id"
+                >
+                  <span
+                    class="MuiButtonBase-root-id MuiIconButton-root-id MuiPrivateSwitchBase-root-id MuiSwitch-switchBase-id MuiSwitch-colorPrimary-id"
+                  >
+                    <span
+                      class="MuiIconButton-label-id"
+                    >
+                      <span
+                        class="MuiSwitch-icon-id"
+                      />
+                      <input
+                        class="MuiPrivateSwitchBase-input-id"
+                        name="valueRequired"
+                        type="checkbox"
+                      />
+                    </span>
+                  </span>
+                  <span
+                    class="MuiSwitch-bar-id"
+                  />
+                </span>
+                <span
+                  class="MuiTypography-root-id MuiTypography-body2-id MuiFormControlLabel-label-id"
+                >
+                  <div
+                    class="ControlledSwitch-label-id"
+                  >
+                    <span
+                      class="ControlledSwitch-labelText-id"
+                    >
+                      Value Required
+                    </span>
+                    <div />
+                  </div>
+                </span>
+              </label>
             </div>
           </div>
           <div
@@ -9420,6 +9640,50 @@ exports[`Storyshots Views / Attributes / Attribute details no values 1`] = `
                   </div>
                 </div>
               </div>
+              <div
+                class="FormSpacer-spacer-id"
+              />
+              <label
+                class="MuiFormControlLabel-root-id"
+              >
+                <span
+                  class="MuiSwitch-root-id"
+                >
+                  <span
+                    class="MuiButtonBase-root-id MuiIconButton-root-id MuiPrivateSwitchBase-root-id MuiSwitch-switchBase-id MuiSwitch-colorPrimary-id"
+                  >
+                    <span
+                      class="MuiIconButton-label-id"
+                    >
+                      <span
+                        class="MuiSwitch-icon-id"
+                      />
+                      <input
+                        class="MuiPrivateSwitchBase-input-id"
+                        name="valueRequired"
+                        type="checkbox"
+                      />
+                    </span>
+                  </span>
+                  <span
+                    class="MuiSwitch-bar-id"
+                  />
+                </span>
+                <span
+                  class="MuiTypography-root-id MuiTypography-body2-id MuiFormControlLabel-label-id"
+                >
+                  <div
+                    class="ControlledSwitch-label-id"
+                  >
+                    <span
+                      class="ControlledSwitch-labelText-id"
+                    >
+                      Value Required
+                    </span>
+                    <div />
+                  </div>
+                </span>
+              </label>
             </div>
           </div>
           <div
