@@ -29,7 +29,6 @@ from ..core.models import (
     SortableModel,
 )
 from ..core.utils import build_absolute_uri
-from ..core.utils.json_serializer import CustomJsonEncoder
 from ..core.utils.translations import TranslationProxy
 from ..core.weight import WeightUnits, zero_weight
 from ..discount import DiscountInfo
