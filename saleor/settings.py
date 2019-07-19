@@ -1,5 +1,6 @@
 import ast
 import os.path
+import warnings
 
 import dj_database_url
 import dj_email_url
@@ -196,22 +197,23 @@ TEMPLATES = [
 SECRET_KEY = os.environ.get("SECRET_KEY")
 
 MIDDLEWARE = [
+    "django.contrib.sessions.middleware.SessionMiddleware",
+    "django.middleware.security.SecurityMiddleware",
     "django.middleware.common.CommonMiddleware",
     "django.middleware.csrf.CsrfViewMiddleware",
-    "saleor.core.middleware.django_session_middleware",
-    "saleor.core.middleware.django_security_middleware",
-    "saleor.core.middleware.django_auth_middleware",
-    "saleor.core.middleware.django_messages_middleware",
-    "saleor.core.middleware.django_locale_middleware",
-    "saleor.core.middleware.babel_locale_middleware",
+    "django.contrib.auth.middleware.AuthenticationMiddleware",
+    "django.contrib.messages.middleware.MessageMiddleware",
+    "django.middleware.locale.LocaleMiddleware",
+    "django_babel.middleware.LocaleMiddleware",
     "saleor.core.middleware.discounts",
     "saleor.core.middleware.google_analytics",
     "saleor.core.middleware.country",
     "saleor.core.middleware.currency",
     "saleor.core.middleware.site",
     "saleor.core.middleware.taxes",
-    "saleor.core.middleware.social_auth_exception_middleware",
-    "saleor.core.middleware.impersonate_middleware",
+    "saleor.core.middleware.extensions",
+    "social_django.middleware.SocialAuthExceptionMiddleware",
+    "impersonate.middleware.ImpersonateMiddleware",
     "saleor.graphql.middleware.jwt_middleware",
 ]
 
@@ -268,8 +270,19 @@ INSTALLED_APPS = [
 
 ENABLE_DEBUG_TOOLBAR = get_bool_from_env("ENABLE_DEBUG_TOOLBAR", False)
 if ENABLE_DEBUG_TOOLBAR:
-    MIDDLEWARE.append("debug_toolbar.middleware.DebugToolbarMiddleware")
-    INSTALLED_APPS.append("debug_toolbar")
+    # Ensure the debug toolbar is actually installed before adding it
+    try:
+        __import__("debug_toolbar")
+    except ImportError as exc:
+        msg = (
+            f"{exc} -- Install the missing dependencies by "
+            f"running `pip install -r requirements_dev.txt`"
+        )
+        warnings.warn(msg)
+    else:
+        MIDDLEWARE.append("debug_toolbar.middleware.DebugToolbarMiddleware")
+        INSTALLED_APPS.append("debug_toolbar")
+
     DEBUG_TOOLBAR_PANELS = [
         # adds a request history to the debug toolbar
         "ddt_request_history.panels.request_history.RequestHistoryPanel",
@@ -662,3 +675,7 @@ GRAPHENE = {
     "RELAY_CONNECTION_ENFORCE_FIRST_OR_LAST": True,
     "RELAY_CONNECTION_MAX_LIMIT": 100,
 }
+
+EXTENSIONS_MANAGER = "saleor.core.extensions.manager.ExtensionsManager"
+
+PLUGINS = os.environ.get("PLUGINS", [])

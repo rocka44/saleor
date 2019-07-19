@@ -3,6 +3,22 @@ schema {
   mutation: Mutations
 }
 
+input AccountInput {
+  firstName: String
+  lastName: String
+  defaultBillingAddress: AddressInput
+  defaultShippingAddress: AddressInput
+}
+
+type AccountRequestDeletion {
+  errors: [Error!]
+}
+
+type AccountUpdate {
+  errors: [Error!]
+  user: User
+}
+
 type Address implements Node {
   id: ID!
   firstName: String!
@@ -1682,6 +1698,8 @@ type Mutations {
   customerAddressCreate(input: AddressInput!, type: AddressTypeEnum): CustomerAddressCreate
   customerSetDefaultAddress(id: ID!, type: AddressTypeEnum!): CustomerSetDefaultAddress
   loggedUserUpdate(input: UserAddressInput!): LoggedUserUpdate
+  accountUpdate(input: AccountInput!): AccountUpdate
+  accountRequestDeletion: AccountRequestDeletion
   staffCreate(input: StaffCreateInput!): StaffCreate
   staffDelete(id: ID!): StaffDelete
   staffBulkDelete(ids: [ID]!): StaffBulkDelete
@@ -3189,6 +3207,7 @@ type Voucher implements Node {
   startDate: DateTime!
   endDate: DateTime
   applyOncePerOrder: Boolean!
+  applyOncePerCustomer: Boolean!
   discountValueType: DiscountValueTypeEnum!
   discountValue: Float!
   minAmountSpent: Money
@@ -3260,6 +3279,7 @@ input VoucherInput {
   minCheckoutItemsQuantity: Int
   countries: [String]
   applyOncePerOrder: Boolean
+  applyOncePerCustomer: Boolean
   usageLimit: Int
 }
 
